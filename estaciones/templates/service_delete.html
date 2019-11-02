@@ -1,0 +1,13 @@
+{% extends "base/base.html" %}
+
+{% block title %}Eliminar Servicio{% endblock title %}
+
+{% block content %}
+  <form method="POST">{% csrf_token %}
+    <h3>¿Desea eliminar el registro de {{service.service_name}}?</h3>
+    <button type="submit" class="btn btn-danger">Sí, Eliminar</button>
+    <a class="btn btn-success" href="{% url 'estaciones:listar_servicios' %}">Cancelar</a>
+  </form>
+
+
+{% endblock content %}

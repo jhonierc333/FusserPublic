@@ -1,0 +1,40 @@
+{% extends "base/base.html" %}
+{% block title %}
+  Listar Productos
+{% endblock title %}
+
+{% block content %}
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope='col'> id_producto </th>
+        <th scope='col'> nombre producto</th>
+        <th scope='col'> precio </th>
+        <th scope='col'> detalle </th>
+
+      </tr>
+    </thead>
+
+    <tbody>
+      {% if object_list %}
+        {% for product in object_list %}
+        <tr class="table-lightve">
+          <th scope='row'>{{product.id_product}}</th>
+          <td>{{product.product_name}}</td>
+          <td>{{product.price}}</td>
+          <td>{{product.detail}}</td>
+          <td>
+          <a class="btn btn-primary" href=" " >Editar</a>
+
+          <a class="btn btn-danger" href="{% url 'estaciones:eliminar_producto' object.id_product %} ">Eliminar</a>
+          </td>
+        </tr>
+        {% endfor %}
+      {% else %}
+      <h2>No hay registro de Productos</h2>
+      {% endif %}
+
+    </tbody>
+  </table>
+  <a class="btn btn-primary" href=" {% url 'estaciones:crear_producto' %}">Nueva</a>
+{% endblock content %}

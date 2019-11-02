@@ -1,0 +1,43 @@
+{% extends "base/base.html" %}
+{% block title %}
+  Listar Servicios
+{% endblock title %}
+
+{% block content %}
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope='col'> id servicio </th>
+        <th scope='col'> nombre servicio</th>
+        <th scope='col'> precio </th>
+        <th scope='col'> detalles </th>
+
+        <th scope='col'> </th>
+      </tr>
+    </thead>
+    <tbody>
+
+      {% if object_list %}
+        {% for service in object_list %}
+        <tr class="table-lightve">
+          <th scope='row'>{{service.id_service}}</th>
+
+
+          <td>{{service.service_name}}</td>
+          <td>{{service.price}}</td>
+          <td>{{service.detail}}</td>
+          <td>
+          <a class="btn btn-primary" href=" " >Editar</a>
+
+            <a class="btn btn-danger" href="{% url 'estaciones:eliminar_servicio' service.id_service %} ">Eliminar</a>
+          </td>
+        </tr>
+        {% endfor %}
+      {% else %}
+      <h2>No hay registro de Servicios</h2>
+      {% endif %}
+
+    </tbody>
+  </table>
+  <a class="btn btn-primary" href=" {% url 'estaciones:crear_servicio' %}">Nueva</a>
+{% endblock content %}
