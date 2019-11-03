@@ -1,16 +1,46 @@
 {% extends 'base/base.html' %}
 
-{% load crispy_forms_tags %}
-
 {% block title %}
 
-Base
+Contact
 {% endblock title %}
 
 {% block content %}
-<form action='' method='post'>{% csrf_token %}
-	{{ form | crispy }}
-	<input type="submit" value="Registrarme">
-</form>
+
+		<div style = "display: flex; justify-content: center; align-items: center; ">
+
+		<div class="wrap-contact2" ">
+			<form method='post' class="contact1-form validate-form">{% csrf_token %}
+
+				<span class="contact2-form-title">
+					Contact Us
+				</span>
+
+				<div class="wrap-input2 validate-input" data-validate="Name is required">
+					<input class="input2" type="text" name="nombre">
+					<span class="focus-input2" data-placeholder="nombre"></span>
+				</div>
+
+				<div class="wrap-input2 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+					<input class="input2" type="text" name="email">
+					<span class="focus-input2" data-placeholder="email"></span>
+				</div>
+
+				<div class="wrap-input2 validate-input" data-validate = "Message is required">
+					<textarea class="input2" name="mensaje"></textarea>
+					<span class="focus-input2" data-placeholder="mensaje"></span>
+				</div>
+
+				<div class="container-contact2-form-btn">
+					<div class="wrap-contact2-form-btn">
+						<div class="contact2-form-bgbtn"></div>
+						<button type="submit" value="Send your Message" class="contact2-form-btn">
+								Send your Message
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+		</div>
 
 {% endblock content %}
