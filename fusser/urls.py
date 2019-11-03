@@ -15,10 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from fusser.views import contact
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^usuario/', include('usuarios.urls', namespace='usuarios')),
     url(r'^estacion/', include('estaciones.urls', namespace='estaciones')),
+    url(r'^contact/', contact, name='contact'),
 
 ]

@@ -1,6 +1,6 @@
 {% extends "base/base.html" %}
 
-
+{% load crispy_forms_tags %}
 
 {% block title %}  Formulario Producto {% endblock title %}
 
@@ -8,7 +8,7 @@
 
 {% block content %}
 	<form method="post"> {% csrf_token %}
-		{{ form.as_p }}
+		{{ form | crispy }}
 
 
 

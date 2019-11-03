@@ -33,14 +33,25 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
+
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
     'usuarios',
-    'estaciones'
+    'estaciones',
+    'crispy_forms',
+
+
 ]
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'oscarpruebadjango@gmail.com'
+EMAIL_HOST_PASSWORD = 'pr0b@rdj@ng0'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -53,6 +64,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'fusser.urls'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
 TEMPLATES = [
     {

@@ -25,3 +25,9 @@ class UsuarioForm(forms.ModelForm):
 
 		for field in self.fields:
 			self.fields[field].widget.attrs.update({'class':'form_control'})
+
+
+class ContactForm(forms.Form):
+	nombre = forms.CharField(max_length=100)
+	email = forms.EmailField()
+	mensaje = forms.CharField(widget=forms.Textarea)
