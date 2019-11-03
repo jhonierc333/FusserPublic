@@ -6,6 +6,7 @@ Contact
 {% endblock title %}
 
 {% block content %}
+<<<<<<< HEAD
 
 		<div style = "display: flex; justify-content: center; align-items: center; ">
 
@@ -42,5 +43,11 @@ Contact
 			</form>
 		</div>
 		</div>
+=======
+<form action='' method='post'>{% csrf_token %}
+	{{ form | crispy }}
+	<input type="submit" value="Enviar">
+</form>
+>>>>>>> e30ec1ed0c5f9da1f8a5d6de26a3d4b14bdcc229
 
 {% endblock content %}
