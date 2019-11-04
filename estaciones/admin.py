@@ -1,12 +1,13 @@
 from django.contrib import admin
 
-# Register your models here.
-
-from estaciones.models import Station
-from estaciones.models import Product
-from estaciones.models import Service
+from estaciones.models import Station, Product, Service
 
 
 admin.site.register(Station)
-admin.site.register(Product)
 admin.site.register(Service)
+
+
+@admin.register(Product)
+
+class ProductAdmin(admin.ModelAdmin):
+	list_display = ('pk', 'product_name', 'price', 'detail')

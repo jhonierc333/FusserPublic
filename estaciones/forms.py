@@ -16,7 +16,7 @@ class EstacionForm(forms.ModelForm):
 			'detail' : ' Detail',
 
 		}
-		
+
 	def __init__(self, *args, **kwargs):
 		super(EstacionForm, self).__init__(*args, **kwargs)
 
@@ -28,10 +28,10 @@ class ProductForm(forms.ModelForm):
 		model = Product
 		fields = '__all__'
 		labels = {
-			'id_product' : 'Id_product',
-			'product_name' :'Product_name',
-			'price' : 'Price',
-			'detail' : 'Detail'
+			'id_product' : 'Id producto',
+			'product_name' :'Nombre del producto ',
+			'price' : 'Precio',
+			'detail' : 'Detalle'
 		}
 
 	def __init__(self, *args, **kwargs):
@@ -47,10 +47,10 @@ class ServiceForm(forms.ModelForm):
 		fields = '__all__'
 		labels = {
 
-			'id_service' : 'id_service',
-			'service_name' : 'Service_name',
-			'price' : 'Price',
-			'detail': 'Detail',
+			'id_service' : 'Id servicio',
+			'service_name' : 'Nombre del servicio',
+			'price' : 'Precio',
+			'detail': 'Detalle',
 		}
 
 	def __init__(self, *args, **kwargs):

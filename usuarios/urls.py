@@ -3,7 +3,9 @@ from usuarios import views
 
 
 urlpatterns = [
-	url(r'^nuevo$', views.crear_usuario, name='crear_usuario'),
+	url(r'^registro$', views.signup, name='registro'),
+	url(r'^inicio$', views.login_view, name='inicio'),
+
 
 
 ]

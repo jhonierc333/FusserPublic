@@ -27,9 +27,9 @@
           <td>{{service.price}}</td>
           <td>{{service.detail}}</td>
           <td>
-          <a class="btn btn-primary" href=" " >Editar</a>
+          <a class="btn btn-success" href=" " >Editar</a>
 
-            <a class="btn btn-danger" href="{% url 'estaciones:eliminar_servicio' service.id_service %} ">Eliminar</a>
+            <a class="btn btn-success" href="{% url 'estaciones:eliminar_servicio' service.id_service %} ">Eliminar</a>
           </td>
         </tr>
         {% endfor %}
@@ -39,5 +39,5 @@
 
     </tbody>
   </table>
-  <a class="btn btn-primary" href=" {% url 'estaciones:crear_servicio' %}">Nueva</a>
+  <a class="btn btn-success" href=" {% url 'estaciones:crear_servicio' %}">Nueva</a>
 {% endblock content %}

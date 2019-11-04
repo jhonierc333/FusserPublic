@@ -1,13 +1,9 @@
 from django.contrib import admin
 
+from usuarios.models import Profile
 
-from usuarios.models import Person
-
-# Register your models here.
-
-
-@admin.register(Person)
+@admin.register(Profile)
 
 class PersonAdmin(admin.ModelAdmin):
-	list_display = ('cedula', 'username', 'phone_number', 'email')
+	list_display = ('pk', 'user', 'phone_number', 'email')
 	list_filter = ('created', 'modified')

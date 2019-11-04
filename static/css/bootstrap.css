@@ -33,7 +33,7 @@
   --warning: #CB4B16;
   --danger: #D33682;
   --light: #FDF6E3;
-  --dark: #073642;
+  --dark: #000000 !important;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;

@@ -24,9 +24,9 @@
           <td>{{product.price}}</td>
           <td>{{product.detail}}</td>
           <td>
-          <a class="btn btn-primary" href=" " >Editar</a>
+          <a class="btn btn-success" href=" " >Editar</a>
 
-          <a class="btn btn-danger" href="{% url 'estaciones:eliminar_producto' product.id_product %} ">Eliminar</a>
+          <a class="btn btn-success" href="{% url 'estaciones:eliminar_producto' product.id_product %} ">Eliminar</a>
           </td>
         </tr>
         {% endfor %}
@@ -36,5 +36,5 @@
 
     </tbody>
   </table>
-  <a class="btn btn-primary" href=" {% url 'estaciones:crear_producto' %}">Nueva</a>
+  <a class="btn btn-success" href=" {% url 'estaciones:crear_producto' %}">Nueva</a>
 {% endblock content %}

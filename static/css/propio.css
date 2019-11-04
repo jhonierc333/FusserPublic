@@ -29,8 +29,9 @@ body {
 }
 
 footer{
-  background-color:  black!important;
-  margin-top: 250px !important;
+  background-color: black!important;
+  margin-top: 476px !important;
+
 
 }
 
@@ -45,6 +46,10 @@ footer{
   background: black !important;
   border: 0px;
 }
+
 .btn{
+  background-color: black !important;
+  background: black !important;
+  border: black;
 
 }
