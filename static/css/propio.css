@@ -23,7 +23,28 @@ body {
 
 
 .container-propio{
-  margin-right:  !important;
+
   margin-left: 60% !important;
+
+}
+
+footer{
+  background-color:  black!important;
+  margin-top: 250px !important;
+
+}
+
+.bg-dark{
+  background-color: #000000!important;
+}
+
+.container{
+  padding: 80px 100px 0px 100px;
+}
+.btn-success{
+  background: black !important;
+  border: 0px;
+}
+.btn{
 
 }
